@@ -1,4 +1,3 @@
-import logging
 from kafka.producer import KafkaProducer
 
 TOPIC_NAME = "kafka.client.tutorial" # producer는 생성한 레코드를 전송하기 위해 전송하고자 하는 토픽을 알고 있어야 한다.
