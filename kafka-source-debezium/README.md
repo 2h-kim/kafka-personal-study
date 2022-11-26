@@ -33,11 +33,14 @@ docker network connect test-network  mysql-container
 
 ## connector 연결
 ```bash
-curl --location --request POST 'http://localhost:8083/connectors' --header 'Content-Type: application/json' -d @test-connector.json
+curl --location --request POST 'http://localhost:8083/connectors' --header 'Content-Type: application/json' -d @source-connector-config/debezium-connector-config/test-connector.json
 ```
 
 ## connector list
 ```bash
 curl --location --request GET 'http://localhost:8083/connectors'
 ```
-
+## connector delete
+```bash
+curl --location --request DELETE 'http://localhost:8083/connectors/debezium-mysql-connector'
+```
